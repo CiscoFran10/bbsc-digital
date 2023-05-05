@@ -3,6 +3,17 @@ export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	theme: {
 		extend: {
+			animation: {
+				marquee: "marquee 30s linear infinite",
+			},
+			keyframes: {
+				marquee: {
+					"0%": { translate: "0%" },
+					"100%": {
+						translate: "-100%",
+					},
+				},
+			},
 			fontFamily: {
 				jakarta: "Plus Jakarta Sans",
 				"dm-sans": " 'DM Sans'",
