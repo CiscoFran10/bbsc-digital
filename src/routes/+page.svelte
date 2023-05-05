@@ -10,10 +10,8 @@
 	import { articles } from "../data";
 </script>
 
-<div class="bg-primary">
-	<Header />
-
-	<section class="container-wrapper">
+<main>
+	<section class="container-wrapper bg-primary">
 		<div class="flex relative h-[400px] md:h-[640px]">
 			<div class="relative w-full h-full">
 				<img
@@ -83,71 +81,71 @@
 			</div>
 		</div>
 	</section>
-</div>
 
-<section class="mt-20 container-wrapper md:mt-40">
-	<div class="flex flex-col items-center justify-center gap-4 max-5wl">
-		<h1 class="text-sm font-medium font-jakarta">WINNERS</h1>
-		<p
-			class="max-w-4xl text-2xl font-bold text-center font-jakarta sm:text-4xl md:text-6xl"
-		>
-			See our latest winners and get inspired!
-		</p>
-	</div>
-	<WinnersGrid />
-</section>
-
-<section class="py-16 mt-20 bg-primary md:mt-40">
-	<Marquee />
-	<AwardsTable />
-</section>
-
-<section class="mt-20 md:mt-28">
-	<div class="flex flex-col items-center justify-center gap-4 max-5wl">
-		<h1 class="text-sm font-medium font-jakarta">WHO WE ARE</h1>
-		<p
-			class="font-jakarta font-bold text-lg sm:text-2xl md:text-4xl lg:text-6xl max-w-[25ch] text-center"
-		>
-			Explore the power of AI tools, developed with ingenuity, brilliance,
-			quality and style_
-		</p>
-
-		<div class="mt-3 text-center">
-			<h2 class="text-lg font-bold font-jakarta">Peter Bowman</h2>
-			<p class="text-base text-secondary-200">Creative Director</p>
-		</div>
-	</div>
-
-	<About />
-</section>
-
-<section class=" mt-16 md:mt-[160px] max-w-[1296px] mx-auto px-4">
-	<h1 class="text-sm font-medium font-jakarta">BLOG</h1>
-
-	<div
-		class="flex flex-col lg:flex-row gap-y-4 justify-between lg:items-center mt-2"
-	>
-		<p
-			class="font-jakarta font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl min-w-[15ch]"
-		>
-			Check Our Recent Articles
-		</p>
-		<div class="flex flex-col gap-4 text-secondary-300 max-w-[50ch]">
-			<p>
-				Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore
-				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitacion
-				ullamco.
-			</p>
-			<p>
-				Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore
-				magna aliqua. Ut enim ad minim veniam.
+	<section class="mt-20 container-wrapper md:mt-40">
+		<div class="flex flex-col items-center justify-center gap-4 max-5wl">
+			<h1 class="text-sm font-medium font-jakarta">WINNERS</h1>
+			<p
+				class="max-w-4xl text-2xl font-bold text-center font-jakarta sm:text-4xl md:text-6xl"
+			>
+				See our latest winners and get inspired!
 			</p>
 		</div>
-	</div>
+		<WinnersGrid />
+	</section>
 
-	<ul class="flex flex-col md:flex-row gap-7 gap-y-12 mt-10 md:mt-20">
-		{#each articles as article (article.title)}
-			<ArticleCard {...article} />
-		{/each}
-	</ul>
-</section>
+	<section class="py-16 mt-20 bg-primary md:mt-40">
+		<Marquee />
+		<AwardsTable />
+	</section>
+
+	<section class="mt-20 md:mt-28">
+		<div class="flex flex-col items-center justify-center gap-4 max-5wl">
+			<h1 class="text-sm font-medium font-jakarta">WHO WE ARE</h1>
+			<p
+				class="font-jakarta font-bold text-lg sm:text-2xl md:text-4xl lg:text-6xl max-w-[25ch] text-center"
+			>
+				Explore the power of AI tools, developed with ingenuity, brilliance,
+				quality and style_
+			</p>
+
+			<div class="mt-3 text-center">
+				<h2 class="text-lg font-bold font-jakarta">Peter Bowman</h2>
+				<p class="text-base text-secondary-200">Creative Director</p>
+			</div>
+		</div>
+
+		<About />
+	</section>
+
+	<section class="my-16 md:my-[160px] max-w-[1296px] mx-auto px-4">
+		<h1 class="text-sm font-medium font-jakarta">BLOG</h1>
+
+		<div
+			class="flex flex-col justify-between mt-2 lg:flex-row gap-y-4 lg:items-center"
+		>
+			<p
+				class="font-jakarta font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl min-w-[15ch]"
+			>
+				Check Our Recent Articles
+			</p>
+			<div class="flex flex-col gap-4 text-secondary-300 max-w-[50ch]">
+				<p>
+					Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore
+					magna aliqua. Ut enim ad minim veniam, quis nostrud exercitacion
+					ullamco.
+				</p>
+				<p>
+					Adipiscing elit, sed do euismod tempor incidunt ut labore et dolore
+					magna aliqua. Ut enim ad minim veniam.
+				</p>
+			</div>
+		</div>
+
+		<ul class="flex flex-col mt-10 md:flex-row gap-7 gap-y-12 md:mt-20">
+			{#each articles as article (article.title)}
+				<ArticleCard {...article} />
+			{/each}
+		</ul>
+	</section>
+</main>

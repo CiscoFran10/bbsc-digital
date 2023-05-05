@@ -41,18 +41,21 @@
 	<ul
 		class="grid grid-cols-2 md:flex items-center justify-center max-w-7xl mx-auto py-14 md:py-[100px] gap-y-7 border-b border-secondary-400/10"
 	>
-		{#each numbers as { name, value } (name)}
+		{#each numbers as { name, value, icon } (name)}
 			<li
-				class="relative flex items-center justify-center border-r last:border-0 flex-1"
+				class="relative flex flex-col items-center justify-center border-r last:border-0 flex-1 gap-2"
 			>
-				<span class="text-primary font-bold text-7xl sm:text-8xl md:text-9xl"
-					>{value}</span
-				>
-				<h2
-					class="absolute inset-0 flex items-center justify-center font-bold font-jakarta text-base sm:text-xl md:text-2xl"
-				>
-					{name}
-				</h2>
+				<img class="hidden lg:block" src={icon} alt="" />
+				<div class="relative flex flex-col items-center justify-center">
+					<span class="text-primary font-bold text-7xl sm:text-8xl md:text-9xl"
+						>{value}</span
+					>
+					<h2
+						class="absolute inset-0 flex items-center justify-center font-bold font-jakarta text-base sm:text-xl md:text-2xl"
+					>
+						{name}
+					</h2>
+				</div>
 			</li>
 		{/each}
 	</ul>

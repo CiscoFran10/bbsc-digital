@@ -16,6 +16,11 @@ import About5 from "./assets/images/about/image-4.jpg";
 import Blog1 from "./assets/images/blog/image-1.jpg";
 import Blog2 from "./assets/images/blog/image-2.jpg";
 
+import Icon1 from "./assets/icons/projects.svg";
+import Icon2 from "./assets/icons/people.svg";
+import Icon3 from "./assets/icons/years.svg";
+import Icon4 from "./assets/icons/offices.svg";
+
 export const articles = [
 	{
 		title: "What’s trending on designers’ charts this spring?",
@@ -40,18 +45,22 @@ export const about = [
 export const numbers = [
 	{
 		name: "Projects",
+		icon: Icon1,
 		value: 98,
 	},
 	{
 		name: "People",
+		icon: Icon2,
 		value: 65,
 	},
 	{
 		name: "Years",
+		icon: Icon3,
 		value: 10,
 	},
 	{
 		name: "Offices",
+		icon: Icon4,
 		value: 15,
 	},
 ];
