@@ -3,6 +3,10 @@ export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				jakarta: "Plus Jakarta Sans",
+				"dm-sans": " 'DM Sans'",
+			},
 			colors: {
 				primary: "#E4F1F5",
 				secondary: {

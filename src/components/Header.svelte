@@ -5,19 +5,19 @@
 	import Menu from "../assets/icons/menu.svg";
 </script>
 
-<header>
+<header class="container-wrapper py-10 flex items-center justify-between">
 	<img src={Logo} alt="" />
 
 	<nav>
-		<ul>
-			<li>
+		<ul class="flex items-center gap-7">
+			<li class="hidden md:block">
 				<button
 					><img src={Search} alt="" /><span class="sr-only"
 						>Pesquisar<span /></span
 					></button
 				>
 			</li>
-			<li>
+			<li class="hidden md:block">
 				<button
 					><img src={Shopping} alt="" /><span class="sr-only">Carrinho</span
 					></button
@@ -31,3 +31,6 @@
 		</ul>
 	</nav>
 </header>
+
+<style lang="postcss">
+</style>
