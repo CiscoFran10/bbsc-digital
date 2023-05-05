@@ -2,16 +2,17 @@
 	import Header from "../components/Header.svelte";
 	import Nature from "../assets/images/nature.jpg";
 	import Arrow from "../assets/icons/arrow.svg";
+	import WinnersGrid from "../components/WinnersGrid.svelte";
 </script>
 
 <div class="bg-primary">
 	<Header />
 
 	<section class="container-wrapper">
-		<div class="grid">
-			<div class="relative col-start-1 col-end-1 row-start-1 row-end-1">
+		<div class="flex relative h-[400px] md:h-[640px]">
+			<div class="relative h-full w-full">
 				<img
-					class="h-full w-full object-cover"
+					class="h-full w-full object-cover object-center"
 					src={Nature}
 					alt="Passaro azul"
 				/>
@@ -20,29 +21,30 @@
 				/>
 			</div>
 			<div
-				class="relative flex flex-col w-full justify-end items-end col-start-1 col-end-1 row-start-1 row-end-1 p-4 md:p-10 gap-1 md:gap-2"
+				class="absolute inset-0 flex flex-col w-full justify-end items-end p-5 md:p-10 gap-1 md:gap-3"
 			>
-				<span class="text-white/50 text-xs md:text-sm font-normal"
+				<span
+					class="text-white/50 text-xs md:text-base font-normal leading-none"
 					>November 1, 2022</span
 				>
 				<h2
-					class="text-base sm:text-xl md:text-2xl font-bold font-jakarta text-white"
+					class="text-base sm:text-xl md:text-3xl font-bold font-jakarta text-white"
 				>
 					Nature Cover
 				</h2>
-				<ul class="flex gap-2 items-center">
+				<ul class="flex gap-2 items-center mt-2">
 					<li
-						class="bg-secondary-400 text-white rounded-lg py-1.5 px-2 md:py-2 md:px-3 text-xs md:text-sm font-medium font-jakarta"
+						class="bg-secondary-400 text-white rounded-lg py-1.5 px-2 md:py-3 md:px-4 text-xs md:text-sm font-medium font-jakarta"
 					>
 						Brand
 					</li>
 					<li
-						class="bg-secondary-400 text-white rounded-lg py-1.5 px-2 md:py-2 md:px-3 text-xs md:text-sm font-medium font-jakarta"
+						class="bg-secondary-400 text-white rounded-lg py-1.5 px-2 md:py-3 md:px-4 text-xs md:text-sm font-medium font-jakarta"
 					>
 						Covers
 					</li>
 					<li
-						class="bg-secondary-400 text-white rounded-lg py-1.5 px-2 md:py-2 md:px-3 text-xs md:text-sm font-medium font-jakarta"
+						class="bg-secondary-400 text-white rounded-lg py-1.5 px-2 md:py-3 md:px-4 text-xs md:text-sm font-medium font-jakarta"
 					>
 						Ideas
 					</li>
@@ -50,9 +52,11 @@
 			</div>
 		</div>
 
-		<div class="mt-8 flex items-start justify-between gap-8 flex-wrap">
+		<div
+			class=" mt-4 md:mt-8 flex flex-col lg:flex-row items-start gap-5 justify-between"
+		>
 			<div>
-				<h1 class="text-3xl sm:text-4xl md:text-7xl font-bold font-jakarta">
+				<h1 class="text-4xl sm:text-5xl md:text-7xl font-bold font-jakarta">
 					Element of the Day
 				</h1>
 				<p class="text-sm sm:text-base md:text-xl text-secondary-300 mt-2">
@@ -66,7 +70,7 @@
 			>
 		</div>
 
-		<div class="flex justify-center w-full mt-14 translate-y-10">
+		<div class="flex justify-center w-full mt-8 md:mt-14 translate-y-10">
 			<div
 				class="bg-white animate-[bounce_1.2s_ease_infinite] p-5 rounded-full h-16 w-16 flex items-center justify-center shadow-md"
 			>
@@ -75,3 +79,5 @@
 		</div>
 	</section>
 </div>
+
+<WinnersGrid />

@@ -9,15 +9,15 @@
 	<img src={Logo} alt="" />
 
 	<nav>
-		<ul class="flex items-center gap-7">
-			<li class="hidden md:block">
+		<ul class="flex items-center gap-5 md:gap-7">
+			<li>
 				<button
 					><img src={Search} alt="" /><span class="sr-only"
 						>Pesquisar<span /></span
 					></button
 				>
 			</li>
-			<li class="hidden md:block">
+			<li>
 				<button
 					><img src={Shopping} alt="" /><span class="sr-only">Carrinho</span
 					></button
